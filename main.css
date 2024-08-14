@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+.inicio ul {
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+    background-color: #D7AC1B;
+    overflow: hidden; 
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.inicio ul li {
+    float: left;
+}
+
+.inicio ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 12px 26px;
+    color: white;
+    text-align: center;
+}
+
+.inicio ul li a:hover:not(.activa) {
+    background-color: #111;
+}
+
+.horizontal-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horizontal-menu ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D7AC1B;
+    border-radius: 20px;
+    flex-wrap: wrap;
+}
+
+.horizontal-menu ul li{
+    float: left;
+}
+
+.horizontal-menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.horizontal-menu ul li a:hover:not(.activa){
+    background-color: #111;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Gideon Roman', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #0000B3;
+}
+
+.contactos ul {
+    list-style: none;
+    background-color: #D7AC1B;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    color: white;
+    font-weight: bold;
+    padding: 40px;
+    margin: 0;
+}
+
+.contactos ul li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0; 
+    padding: 10px 0;
+}
+
+.contactos ul li a {
+    color: white;
+    text-align: center;
+}
+
+*{
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Gideon Roman', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.grid-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.descripcion-producto {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.grid-item:hover .descripcion-producto {
+    display: flex;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.grid-item:hover {
+    transform: scale(1.1);
+}
+
+.producto-detalles {
+    color: #000000;
+    padding: .5rem;
+    border-radius: 10px;
+    margin-top: -2rem;
+    margin-bottom: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.producto-titulo {
+    font-size: 1.1rem;
+    margin: 5px 0;
+    margin-bottom: -30px;
+}
+
+.producto-precio {
+    font-size: 1.1rem;
+    margin-bottom: -10px;
+}
+
+.producto-agregar {
+    background-color: #6c5ce7;
+    color: #ffffff;
+    padding: 8px 16px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: bold;
+    position: relative;
+}
+
+.producto-agregar:hover {
+    background-color: #5a4daa;
+}
+
+main {
+    background-color: white;
+    margin: 1rem;
+    margin-left: 0;
+    border-radius: 2rem;
+    padding: 3rem;
+}
+
+.contenedor-carrito{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.disabled {
+    display: none;
+}
+
+.img {
+    display: block;
+    margin: auto;
+    margin-bottom: -60px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .horizontal-menu ul, .inicio ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal-menu ul li, .inicio ul li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+
+    h1, h2 {
+        font-size: 30px;
+    }
+
+    .producto-titulo, .producto-precio, .producto-agregar {
+        font-size: 0.9rem;
+    }
+
+    .contactos ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactos ul li a {
+        width: 500%;
+        text-align: center;
+    }
+
+    .img {
+        width: 100%;
+        margin-bottom: -30px;
+    }
+}

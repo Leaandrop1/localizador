@@ -1,0 +1,249 @@
+/* Estilos generales */
+* {
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Gideon Roman';
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+}
+
+.horizontal-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.horizontal-menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #D7AC1B;
+    border-radius: 20px;
+}
+
+.horizontal-menu ul li {
+    float: left;
+}
+
+.horizontal-menu ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.horizontal-menu ul li a:hover:not(.activa) {
+    background-color: #111;
+}
+
+h1 {
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Gideon Roman', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    color: #0000B3;
+}
+
+header, main {
+    text-align: center;
+}
+
+.inicio ul {
+    list-style: none;
+    margin: 0 0 15px 0;
+    padding: 0;
+    background-color: #D7AC1B;
+    list-style-type: none;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.inicio ul li {
+    float: left;
+}
+
+.inicio ul li a {
+    text-decoration: none;
+    display: block;
+    padding: 12px 26px;
+    color: white;
+    text-align: center;
+}
+
+.inicio ul li a:hover:not(.activa) {
+    background-color: #111;
+}
+
+.slogan {
+    background-color: #ffeacf;
+    color: #111;
+    border-style: solid;
+    border-width: 2px 0;
+}
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "mision vision" "mision-p vision-p";
+}
+
+.contenedor .mision, .contenedor .vision {
+    text-align: center;
+    font-weight: bold;
+    font-size: 23px;
+}
+
+.contenedor .mision {
+    grid-area: mision;
+}
+
+.contenedor .vision {
+    grid-area: vision;
+}
+
+.contenedor .mision-p {
+    grid-area: mision-p;
+}
+
+.contenedor .vision-p {
+    grid-area: vision-p;
+}
+
+.contenedor-srv .fp {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    grid-gap: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-template-areas: "titulo-srv titulo-srv" "img-service prfo-srv";
+}
+
+.contenedor-srv .img-service {
+    grid-area: img-service;
+}
+
+.contenedor-srv .titulo-srv {
+    grid-area: titulo-srv;
+}
+
+.contenedor-srv .titulo-srv h1 {
+    font-size: 35px;
+}
+
+.contenedor-srv .prfo-srv {
+    grid-area: prfo-srv;
+}
+
+.contenedor-srv .img-service img {
+    width: 100%;
+}
+
+.contenedor-srv .boton {
+    grid-area: boton;
+}
+
+.boton input[type=submit], .boton2 input[type=submit] {
+    background-color: #ffbe2c;
+    font-size: 30px;
+    border-radius: 10px;
+    border: solid 3px black;
+    font-weight: bold;
+    align-items: center;
+}
+
+.boton {
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    padding: 0 0 40px 0;
+}
+
+h2 {
+    font-family: 'Alumni Sans Collegiate One', sans-serif;
+    font-family: 'Gideon Roman', sans-serif;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contactos ul {
+    list-style: none;
+    background-color: #D7AC1B;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    color: white;
+    font-weight: bold;
+    padding: 40px;
+    margin: 0; 
+}
+
+.contactos ul li {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0; 
+    padding: 10px 0;
+}
+
+.contactos ul li a {
+    color: white;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .horizontal-menu ul, .inicio ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .horizontal-menu ul li, .inicio ul li {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .contenedor, .contenedor-srv .fp {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "mision"
+            "vision"
+            "mision-p"
+            "vision-p"
+            "titulo-srv"
+            "img-service"
+            "prfo-srv";
+    }
+
+    .contenedor-srv .titulo-srv h1 {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .boton input[type=submit], .boton2 input[type=submit] {
+        font-size: 20px;
+    }
+
+    .contactos ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contactos ul li a {
+        width: 500%;
+        text-align: center;
+    }
+    
+}
